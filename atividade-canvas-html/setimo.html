@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Directions</title>
+  <style>
+    canvas{border:1px solid black}
+  </style>
+</head>
+<body>
+
+<canvas width="1600" height="1000"></canvas>
+
+
+
+<script>
+  let dirX=0;
+  let dirY=0;
+  let posX=550;
+  let posY=400;
+  let velocity=20;
+
+  let canvas = document.querySelector('canvas');
+  let ctx = canvas.getContext('2d');
+  var x = 5, y = 10;
+  var imagem = new Image();
+
+  function drawRect(x, y){
+                imagem.src = "oclin.png";
+                ctx.drawImage(imagem,x,y);
+                   
+  }
+
+
+
+  function Start(){
+    let time = setInterval(Update, 100);
+    document.addEventListener('keydown', KeyDown);
+    document.addEventListener('keyup', KeyUp);
+  }
+  function KeyUp(){
+    let tecla = event.key;
+    if(tecla === 'ArrowRight')
+      dirX = 0
+    else if(tecla === 'ArrowLeft')
+      dirX = 0
+    else if(tecla === 'ArrowUp')
+      dirY = 0
+    else if(tecla === 'ArrowDown')
+      dirY = 0
+  }
+  function KeyDown(){
+    let tecla = event.key;
+    if(tecla === 'ArrowRight' && x<700)
+      dirX = 1
+    else if(tecla === 'ArrowLeft' && x> 0)
+      dirX = -1
+    else if(tecla === 'ArrowUp' && y<550)
+      dirY = -1
+    else if(tecla === 'ArrowDown' && y<550)
+      dirY = 1
+  }
+
+  
+  function Update(){
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    posX += dirX * velocity;
+    posY += dirY * velocity;
+    drawRect(posX, posY);
+  }
+
+  window.addEventListener('load', Start)
+
+
+
+
+
+</script>
+</body>
+</html>

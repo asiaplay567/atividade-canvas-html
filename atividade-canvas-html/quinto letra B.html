@@ -1,0 +1,30 @@
+<html>
+<body>
+    <canvas width="400" height="300"></canvas>
+
+    <script>
+        let canvas = document.querySelector('canvas');
+        let context = canvas.getContext('2d');
+
+        for (let a = 0; a < 6; a++) {
+            for (let b = 0; b < 3; b++) {
+                context.beginPath();
+                context.strokeStyle="blue";
+                context.rect(50 + (60 * a), 40 + (60 * b), 40, 40);
+                context.stroke();
+
+                context.strokeStyle="blue";
+
+                context.moveTo(70+60*a, 45+60*b);
+                context.lineTo(55+60*a, 75+60*b);
+                context.lineTo(85+60*a, 75+60*b);
+                context.closePath();
+                context.stroke();
+
+            }
+        }
+
+    </script>
+</body>
+
+</html>

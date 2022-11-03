@@ -1,0 +1,11 @@
+1 – Com suas palavras descreva o que é a DOM e qual sua relação com o HTML
+O modelo de objeto de documento é conhecido como DOM. É uma interface de programação que nos permite adicionar, editar ou excluir itens do documento. Esses elementos também podem ter eventos adicionados a eles para que nossa página seja mais dinâmica.
+Um documento HTML é visto pelo DOM como uma árvore de nós. Um elemento HTML é representado por um nó.
+Quando este modelo é alterado usando a linguagem de script usada para a estrutura da página, o estilo e outros elementos podem ser alterados sem precisar recarregar a página.
+Sua relação com o HTML é semelhante à das outras linguagens que podem ser conectadas ao DOM.
+2 – O que é o canvas HTML
+O elemento HTML canvas pode ser usado para desenhar usando a linguagem script (normalmente Javascript). Isso pode ser usado, por exemplo, para criar colagens de fotos, animações simples ou um pouco mais complexas, design gráfico, imagens bitmap e fórmulas 2D que podem ser exibidas dinamicamente e com script usando o elemento canvas HTML5. Um bitmap é atualizado usando um modelo procedural de baixo nível. Também útil para o desenvolvimento de jogos 2D é o HTML5 Canvas.
+3 – Quais as linguagens e tecnologias comumente envolvidas no desenvolvimento de produtos baseados em canvas html
+HTML e Javascript(mais comummente usada) se esta usando o canvas no html logo ele esta claramente envolvido e para utiliza-lo precisa também de uma linguagem de script logo a mais comummente usada para tal é a javascrip
+4 – Explique para que serve o código “document.getElementById()”
+Em essência, document.getElementById() é uma função Javascript que retorna um elemento DOM identificado por um ID específico, como o nome já sugere.
